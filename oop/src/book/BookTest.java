@@ -19,8 +19,7 @@ public class BookTest {
         System.out.println("Author's email is: " + dummyBook.getAuthor().getEmail());
 
 // Use an anonymous instance of Author to construct a Book instance
-        Book anotherBook = new Book("more Java",
-                new Author("Paul Tan", "paul@somewhere.com", 'm'), 29.95);
+        Book anotherBook = new Book("more Java", new Author("Paul Tan", "paul@somewhere.com", 'm'), 29.95);
         System.out.println(anotherBook);  // toString()
     }
 }

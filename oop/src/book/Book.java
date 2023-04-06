@@ -6,10 +6,15 @@ public class Book {
     private int qty;
     private Author author;
 
-    public Book(String name, double price, int qty, Author author) {
+    public Book(String name, Author author, double price) {
         this.name = name;
         this.price = price;
-        this.qty = qty;
+        this.author = author;
+    }
+    public Book(String name, Author author, double price, int qty ) {
+        this.name = name;
+        this.price = price;
+        this.qty = 0;
         this.author = author;
     }
 
