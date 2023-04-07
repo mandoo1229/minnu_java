@@ -27,17 +27,3 @@ public class AccountTest {
         System.out.println(a2);
     }
 }
-/*
-
-Account[id=A101,name=Tan Ah Teck,balance=88]
-Account[id=A102,name=Kumar,balance=0]
-ID: A101
-Name: Tan Ah Teck
-Balance: 88
-Account[id=A101,name=Tan Ah Teck,balance=188]
-Account[id=A101,name=Tan Ah Teck,balance=138]
-Amount exceeded balance
-Account[id=A101,name=Tan Ah Teck,balance=138]
-Account[id=A101,name=Tan Ah Teck,balance=38]
-Account[id=A102,name=Kumar,balance=100]
- */
