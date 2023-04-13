@@ -37,10 +37,12 @@ public class Date {
     }
 
     public void setDate (int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
-
     @Override
     public String toString() {
-        System.out.println("dd/mm/yyyy");
+        return String.format("%02d/%02d/%d", day, month, year);
     }
 }

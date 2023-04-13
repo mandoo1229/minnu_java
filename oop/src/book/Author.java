@@ -20,7 +20,7 @@ public class Author {
     }
 
     public char getGender() {
-        return gender;
+        return gender = ('m');
     }
 
     public void setEmail(String email) {
