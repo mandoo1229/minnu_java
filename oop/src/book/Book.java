@@ -10,11 +10,12 @@ public class Book {
         this.name = name;
         this.price = price;
         this.author = author;
+        this.qty = 0;
     }
     public Book(String name, Author author, double price, int qty ) {
         this.name = name;
         this.price = price;
-        this.qty = 0;
+        this.qty = qty;
         this.author = author;
     }
 
@@ -44,6 +45,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book[name=?, Author[name=?, email=?, gender=?], price=?, qty=?]";
+        return "Book[" + "name=" + name + "," + author + "," +"price=" + price +","+ "qty=" + qty +"]";
     }
 }

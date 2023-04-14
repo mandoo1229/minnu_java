@@ -20,7 +20,7 @@ public class Author {
     }
 
     public char getGender() {
-        return gender = ('m');
+        return gender;
     }
 
     public void setEmail(String email) {
@@ -29,6 +29,7 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Author [name=?, email=?, gender=?]";
+        return String.format("Author[name=%s,email=%s,gender=%c]",
+                name, email, gender);
     }
 }

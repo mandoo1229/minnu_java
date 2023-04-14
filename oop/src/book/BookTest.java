@@ -23,3 +23,15 @@ public class BookTest {
         System.out.println(anotherBook);  // toString()
     }
 }
+
+/*
+Author[name=Tan Ah Teck,email=ahteck@nowhere.com,gender=m]
+Book[name=Java for dummy,Author[name=Tan Ah Teck,email=ahteck@nowhere.com,gender=m],price=19.95,qty=99]
+name is: Java for dummy
+price is: 29.95
+qty is: 28
+Author is: Author[name=Tan Ah Teck,email=ahteck@nowhere.com,gender=m]
+Author's name is: Tan Ah Teck
+Author's email is: ahteck@nowhere.com
+Book[name=more Java,Author[name=Paul Tan,email=paul@somewhere.com,gender=m],price=29.95,qty=0]
+ */
