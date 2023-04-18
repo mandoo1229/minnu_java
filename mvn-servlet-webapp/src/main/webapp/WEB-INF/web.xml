@@ -23,7 +23,7 @@
   metadata-complete="false">
     <context-param>
         <param-name>DB_URL</param-name>
-        <param-value>jdbc:mariadb://localhost:3306/employees</param-value>
+        <param-value>jdbc:mariadb://localhost:3306/mydatabase</param-value>
     </context-param>
     <context-param>
         <param-name>DB_USER</param-name>

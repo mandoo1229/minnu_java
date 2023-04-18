@@ -7,10 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 @WebServlet(urlPatterns = "/first")
 public class EmployeeServlet extends HttpServlet {
@@ -74,17 +71,28 @@ public class EmployeeServlet extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String sql = "insert into employees value (?,?,?,?,?,?)";
         req.setCharacterEncoding("UTF-8");
         String empNo = req.getParameter("emp_no");
         String birthDate = req.getParameter("birth_date");
         String firstName = req.getParameter("first_name");
         String lastName = req.getParameter("last_name");
         String gender = req.getParameter("gender");
+        String hireDate = req.getParameter("hire_date");
+        Connection con = (Connection) req.getServletContext().getAttribute("dbConnection");
 
-        System.out.println("empNo = " + empNo);
-        System.out.println("birth_date = " + birthDate);
-        System.out.println("first_name = " + firstName);
-        System.out.println("last_name = " + lastName);
-        System.out.println("gender = " + gender);
+        try (PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setInt(1, Integer.parseInt(empNo));
+            stmt.setString(2,birthDate);
+            stmt.setString(3,firstName);
+            stmt.setString(4,lastName);
+            stmt.setString(5,gender);
+            stmt.setString(6,hireDate);
+//            데이터 베이스에 데이터를 넣는 코드입니다.
+            int count = stmt.executeUpdate();
+            System.out.println("실행되었습니다.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
